@@ -28,6 +28,7 @@ class ConcertAttending(models.Model):
         Concert, null=True, on_delete=models.CASCADE, related_name="attendee"
     )
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    
     attending = models.CharField(
         max_length=100,
         choices=AttendingChoices.choices,
