@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -25,8 +26,8 @@ SECRET_KEY = "django-insecure-__a-u30pii=rp1qde9t@zdmykl=my#x0679qk#k895i7f#=+c=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '*.cognitiveclass.ai']
-CSRF_TRUSTED_ORIGINS = ['https://*.cognitiveclass.ai']
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0", "*.cognitiveclass.ai"]
+CSRF_TRUSTED_ORIGINS = ["https://*.cognitiveclass.ai"]
 
 # Application definition
 
@@ -98,10 +99,10 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS': {
-            'min_length': 3,
-        }
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "OPTIONS": {
+            "min_length": 3,
+        },
     },
 ]
 
@@ -125,7 +126,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 
 # Actual directory user files go to
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
